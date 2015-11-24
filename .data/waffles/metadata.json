@@ -161,6 +161,51 @@
             "unit": "",
             "scales": ["ordinal"],
             "sourceLink": ""
+        },
+        "pop1": {
+            "allowCharts": ["*"],
+            "use": "indicator",
+            "unit": "",
+            "scaleType": "log",
+            "scales": ["linear", "log"],
+            "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
+            "domain": [14000, 1400000000]
+        },
+        "pop2": {
+            "allowCharts": ["*"],
+            "use": "indicator",
+            "unit": "",
+            "scaleType": "log",
+            "scales": ["linear", "log"],
+            "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
+            "domain": [14000, 1400000000]
+        },
+        "pop3": {
+            "allowCharts": ["*"],
+            "use": "indicator",
+            "unit": "",
+            "scaleType": "log",
+            "scales": ["linear", "log"],
+            "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
+            "domain": [14000, 1400000000]
+        },
+        "pop4": {
+            "allowCharts": ["*"],
+            "use": "indicator",
+            "unit": "",
+            "scaleType": "log",
+            "scales": ["linear", "log"],
+            "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
+            "domain": [14000, 1400000000]
+        },
+        "pop5": {
+            "allowCharts": ["*"],
+            "use": "indicator",
+            "unit": "",
+            "scaleType": "log",
+            "scales": ["linear", "log"],
+            "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
+            "domain": [14000, 1400000000]
         }
     },
     "indicatorsTree":{ 
@@ -189,7 +234,18 @@
                         "children": [{"id": "u5mr_not"}, {"id": "childSurv"}]
                     }
                 ]
-            }, {
+            },
+            {
+                "id": "stub",
+                "children": [
+                    {"id": "pop1"},
+                    {"id": "pop2"},
+                    {"id": "pop3"},
+                    {"id": "pop4"},
+                    {"id": "pop5"}
+                ]
+            },
+            {
                 "id": "pop"
             }, {
                 "id": "_default"

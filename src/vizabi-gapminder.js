@@ -449,7 +449,7 @@ BubbleChart.define('default_options', {
       },
       axis_y: {
         use: "indicator",
-        which: "u5mr",
+        which: "pop1",
         scaleType: "linear",
         allow: {
           scales: ["linear", "log"]
@@ -457,7 +457,7 @@ BubbleChart.define('default_options', {
       },
       axis_x: {
         use: "indicator",
-        which: "gdp_per_cap",
+        which: "pop1",
         scaleType: "log",
         allow: {
           scales: ["linear", "log"]
@@ -480,7 +480,7 @@ BubbleChart.define('default_options', {
       },
       size: {
         use: "indicator",
-        which: "pop",
+        which: "pop1",
         scaleType: "linear",
         allow: {
           scales: ["linear", "log"]
@@ -494,7 +494,7 @@ BubbleChart.define('default_options', {
     //reader: "waffle",
     reader: "csv",
     //path: Vzb._globals.gapminder_paths.baseUrl + "data/waffles/basic-indicators.csv",
-    path: globals.gapminder_paths.baseUrl + "data/waffles/dont-panic-poverty.csv",
+    path: globals.gapminder_paths.baseUrl + "data/waffles/data-result.csv",
     splash: true
       //path: "https://dl.dropboxusercontent.com/u/21736853/data/process/childsurv_2015test/bub_data_u5mr_inc_etc_20150823.csv"
   },
