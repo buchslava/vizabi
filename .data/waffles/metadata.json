@@ -140,7 +140,7 @@
             "scales": ["linear", "log"],
             "sourceLink": ""
         },
-        "prod_prod_pc": {
+        "prod_pc": {
             "allowCharts": ["bubblechart", "bubblemap"],
             "use": "indicator",
             "unit": "prod_prod_pc",
@@ -203,7 +203,7 @@
                 "id": "erling",
                 "children": [
                     {"id": "prod_cost"}, 
-                    {"id": "prod_prod_pc"},
+                    {"id": "prod_pc"},
                     {"id": "sales__unit__mSEK"},
                     {"id": "sales_pc"}
                 ]
