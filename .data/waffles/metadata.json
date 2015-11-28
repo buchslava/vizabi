@@ -133,6 +133,34 @@
             "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
             "domain": [0, 550]
         },
+        "prod_cost": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "prod_cost",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
+        },
+        "prod_prod_pc": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "prod_prod_pc",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
+        },
+        "sales__unit__mSEK": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "sales__unit__mSEK",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
+        },
+        "sales_pc": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "sales_pc",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
+        },
         "age": {
             "allowCharts": ["popbyage"],
             "use": "indicator",
@@ -168,12 +196,19 @@
                 "id": "health",
                 "children": [
                     {"id": "lex"}, 
-                    {"id": "u5mr"}
+                    {"id": "u5mr"},
+                    {"id": "tfr"}
+                ]
+            }, {
+                "id": "erling",
+                "children": [
+                    {"id": "prod_cost"}, 
+                    {"id": "prod_prod_pc"},
+                    {"id": "sales__unit__mSEK"},
+                    {"id": "sales_pc"}
                 ]
             }, {
                 "id": "pop"
-            }, {
-                "id": "tfr"
             }, {
                 "id": "_default"
             }

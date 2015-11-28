@@ -230,8 +230,8 @@ BubbleMap.define('default_options', {
   },
   data: {
     reader: "csv",
-    path: globals.gapminder_paths.baseUrl + "data/waffles/dont-panic-poverty.csv",
-    splash: true
+    path: globals.gapminder_paths.baseUrl + "data/waffles/combo_fake_151128.csv",
+    splash: false
   },
   language: language,
   ui: {
@@ -501,7 +501,7 @@ BubbleChart.define('default_options', {
     //reader: "waffle",
     reader: "csv",
     //path: Vzb._globals.gapminder_paths.baseUrl + "data/waffles/basic-indicators.csv",
-    path: globals.gapminder_paths.baseUrl + "data/waffles/combo_hans_common.csv",
+    path: globals.gapminder_paths.baseUrl + "data/waffles/combo_fake_151128.csv",
     splash: false
       //path: "https://dl.dropboxusercontent.com/u/21736853/data/process/childsurv_2015test/bub_data_u5mr_inc_etc_20150823.csv"
   },
