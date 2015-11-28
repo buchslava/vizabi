@@ -71,13 +71,6 @@
             "scales": ["ordinal"],
             "sourceLink": "https://docs.google.com/spreadsheets/d/1OxmGUNWeADbPJkQxVPupSOK5MbAECdqThnvyPrwG5Os/pub"
         },
-        "size": {
-            "allowCharts": ["none"],
-            "use": "property",
-            "unit": "",
-            "scales": ["ordinal"],
-            "sourceLink": ""
-        },
         "pop": {
             "allowCharts": ["*"],
             "use": "indicator",
@@ -88,11 +81,18 @@
             "domain": [14000, 1400000000]
         },
         "lex": {
-            "allowCharts": ["linechart", "barchart","barrankchart"],
+            "allowCharts": ["linechart", "barchart","barrankchart", "bubblechart"],
             "use": "indicator",
             "unit": "lex",
             "scales": ["linear"],
             "sourceLink": "https://docs.google.com/spreadsheets/d/1H3nzTwbn8z4lJ5gJ_WfDgCeGEXK3PVGcNjQ_U5og8eo/pub?gid=1"
+        },
+        "tfr": {
+            "allowCharts": ["*"],
+            "use": "indicator",
+            "unit": "tfr",
+            "scales": ["linear", "log"],
+            "sourceLink": "https://gapminder.org"
         },
         "gini": {
             "allowCharts": ["mountainchart", "bubblechart", "bubblemap"],
@@ -110,28 +110,20 @@
             "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
             "domain": [300, 130000]
         },
-        "gdppc_pday": {
-            "allowCharts": ["none"],
+        "gdp": {
+            "allowCharts": ["*"],
             "use": "indicator",
-            "unit": "gdppc_pday",
+            "unit": "gdp",
             "interpolation": "exp",
             "scales": ["log", "linear"],
-            "sourceLink": "https://docs.google.com/spreadsheets/d/1PybxH399kK6OjJI4T2M33UsLqgutwj3SuYbk7Yt6sxE/pub?gid=1"
+            "sourceLink": "https://gapminder.org"
         },
-        "inc_pday": {
-            "allowCharts": ["none"],
+        "gni_pc_u_usd_cu": {
+            "allowCharts": ["*"],
             "use": "indicator",
-            "unit": "inc_pday",
-            "interpolation": "exp",
-            "scales": ["log", "linear"],
-            "sourceLink": "https://docs.google.com/spreadsheets/d/1PybxH399kK6OjJI4T2M33UsLqgutwj3SuYbk7Yt6sxE/pub?gid=1"
-        },
-        "u5mr_not": {
-            "allowCharts": ["none"],
-            "use": "indicator",
-            "unit": "u5mr",
+            "unit": "gni_pc_u_usd_cu",
             "scales": ["linear", "log"],
-            "sourceLink": "https://docs.google.com/spreadsheets/d/1KqOcaDdM1rWQD8TnAEZpYDDQRJqlxqU7t_KT55pgd4U/pub?gid=1"
+            "sourceLink": "https://gapminder.org"
         },
         "u5mr": {
             "allowCharts": ["bubblechart", "bubblemap"],
@@ -141,12 +133,33 @@
             "sourceLink": "http://www.gapminder.org/news/data-sources-dont-panic-end-poverty",
             "domain": [0, 550]
         },
-        "childSurv": {
-            "allowCharts": ["none"],
+        "prod_cost": {
+            "allowCharts": ["bubblechart", "bubblemap"],
             "use": "indicator",
-            "unit": "childSurv",
+            "unit": "prod_cost",
             "scales": ["linear", "log"],
-            "sourceLink": "https://docs.google.com/spreadsheets/d/1KqOcaDdM1rWQD8TnAEZpYDDQRJqlxqU7t_KT55pgd4U/pub?gid=1"
+            "sourceLink": ""
+        },
+        "prod_prod_pc": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "prod_prod_pc",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
+        },
+        "sales__unit__mSEK": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "sales__unit__mSEK",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
+        },
+        "sales_pc": {
+            "allowCharts": ["bubblechart", "bubblemap"],
+            "use": "indicator",
+            "unit": "sales_pc",
+            "scales": ["linear", "log"],
+            "sourceLink": ""
         },
         "age": {
             "allowCharts": ["popbyage"],
@@ -170,24 +183,29 @@
                 "id": "time"
             }, {
                 "id": "_properties",
-                "children": [{"id": "geo"}, {"id": "geo.name"}, {"id": "geo.region"}, {"id": "size"}]
+                "children": [{"id": "geo"}, {"id": "geo.name"}, {"id": "geo.region"}]
             }, {
                 "id": "economy",
                 "children": [
                     {"id": "inequality", "children": [{"id":"gini"}]}, 
-                    {"id": "gdp_per_cap"}, 
-                    {"id": "gdppc_pday"}, 
-                    {"id": "inc_pday"}
+                    {"id": "gdp_per_cap"},
+                    {"id": "gdp"},
+                    {"id": "gni_pc_u_usd_cu"}
                 ]
             }, {
                 "id": "health",
                 "children": [
                     {"id": "lex"}, 
                     {"id": "u5mr"},
-                    {
-                        "id": "child_health_others",
-                        "children": [{"id": "u5mr_not"}, {"id": "childSurv"}]
-                    }
+                    {"id": "tfr"}
+                ]
+            }, {
+                "id": "erling",
+                "children": [
+                    {"id": "prod_cost"}, 
+                    {"id": "prod_prod_pc"},
+                    {"id": "sales__unit__mSEK"},
+                    {"id": "sales_pc"}
                 ]
             }, {
                 "id": "pop"
