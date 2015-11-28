@@ -143,7 +143,7 @@
         "prod_pc": {
             "allowCharts": ["bubblechart", "bubblemap"],
             "use": "indicator",
-            "unit": "prod_prod_pc",
+            "unit": "prod_pc",
             "scales": ["linear", "log"],
             "sourceLink": ""
         },

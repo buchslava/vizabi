@@ -79,7 +79,7 @@
     "indicator/gdp": "GDP",
     "indicator/gni_pc_u_usd_cu": "GNI pc",
     "indicator/prod_cost": "Prod cost",
-    "indicator/prod_pc": "Prod cost pc",
+    "indicator/prod_pc": "Prod pc",
     "indicator/sales__unit__mSEK": "Sales",
     "indicator/sales_pc": "Sales pc",
     
@@ -87,7 +87,7 @@
     "unit/gdp": "$/year",
     "unit/gni_pc_u_usd_cu": "u usd cu",
     "unit/prod_cost": "$",
-    "unit/prod_pc": "$",
+    "unit/prod_pc": "",
     "unit/sales__unit__mSEK": "millisek",
     "unit/sales_pc": "$",
     
