@@ -83,7 +83,7 @@
     "indicator/sales__unit__mSEK": "Sales",
     "indicator/sales_pc": "Sales pc",
     
-    "unit/tfr": "Babies per woman",    
+    "unit/tfr": "",    
     "unit/gdp": "$/year",
     "unit/gni_pc_u_usd_cu": "u usd cu",
     "unit/prod_cost": "$",
