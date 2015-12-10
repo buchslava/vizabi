@@ -155,6 +155,7 @@ var Data = Class.extend({
           col.nested = {};
           col.unique = {};
           col.limits = {};
+          col.frames = {};
           // col.sorted = {}; // TODO: implement this for sorted data-sets, or is this for the server/(or file reader) to handle?
 
           // returning the query-id/values of the merged query without splitting the result up again per query
@@ -215,8 +216,15 @@ var Data = Class.extend({
       case 'limits':
         this._collection[queryId][what][id] = this._getLimits(queryId, whatId);
         break;
+      case 'frames':
+        this._collection[queryId][what][id] = this._getFrames(queryId, whatId);
+        break;
     }
     return this._collection[queryId][what][id];
+  },
+    
+  _getFrames: function(queryId, attr) {
+      console.log("get frames")
   },
 
   _getUnique: function(queryId, attr) {

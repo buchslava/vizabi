@@ -1198,6 +1198,24 @@ export var hashCode = function(str) {
   return hash.toString();
 };
 
+
+/*
+ * Converts D3 nest array into the object with key-value pairs, recursively
+ * @param {Array} array like this [{key: k, values: [a, b, ...]}, {...} ... {...}]
+ * @return {Object} object like this {k: [a, b, ...], ...}
+ */
+//
+export var nestArrayToObj = function(arr) {
+  if(!arr || !arr.length || !arr[0].key) return arr;
+  var res = {};
+  for(var i = 0; i < arr.length; i++) {
+    res[arr[i].key] = nestArrayToObj(arr[i].values);
+  };
+  return res;
+}
+
+
+
 /*
  * Performs an ajax request
  * @param {Object} options

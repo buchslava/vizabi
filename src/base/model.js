@@ -676,6 +676,7 @@ var Model = Events.extend({
     else {
       utils.forEach(this._dataCube, function(hook, name) {
         filtered = hook.getNestedItems(group_by);
+          console.log(filtered)
 
         response[name] = {};
         //find position from first hook
@@ -803,6 +804,7 @@ var Model = Events.extend({
    * @returns {Object} nest items object
    */
   getNestedItems: function(order) {
+      console.log(order, this.which)
     if(!order) {
       utils.warn("No order array provided to getNestedItems(<order>). E.g.: getNestedItems(['geo'])");
       return {};
@@ -826,16 +828,9 @@ var Model = Events.extend({
       );
     };
 
-    function nestToObj(arr) {
-      if(!arr || !arr.length || !arr[0].key) return arr;
-      var res = {};
-      for(var i = 0; i < arr.length; i++) {
-        res[arr[i].key] = nestToObj(arr[i].values);
-      };
-      return res;
-    }
 
-    return nested[order_id] = nestToObj(nest.entries(items));
+
+    return nested[order_id] = utils.nestArrayToObj(nest.entries(items));
   },
 
   /**
